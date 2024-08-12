@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<style>
+body {
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;     /*allows us to include the padding and border in an element's total width and height
+									width + padding + border = actual width of an element
+									height + padding + border = actual height of an element*/
+	
+	background-color:  #DEB887;
+}
+
+.container {
+	width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	
+}
+
+.image-container {
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+.content {
+	position: relative;
+	z-index: 1;      /*that defines the order of erlapping html elments*/
+	background-color: rgba(255, 255, 255, 0.7);
+	padding: 20px;
+}
+
+.frame {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #ffffff;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.frame .left, .frame .right {
+	flex: 1;						/*flex property sets the flexible length on th flexible items*/
+	min-width: 300px;
+}
+
+.frame .left img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.left img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	 /* Adjust the blur intensity as needed */
+}
+
+.frame .right {
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.frame .right h1 {
+	margin-bottom: 20px;
+	font-size: 2em;
+	color: #333;
+}
+
+.frame .right form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.frame .right form .input-group {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.frame .right form .input-group label {
+	text-align: left;
+	font-weight: 500;
+}
+
+.frame .right form .input-group input {
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+.frame .right form button {
+	padding: 10px;
+	background-color: #007bff;
+	color: #ffffff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1em;
+}
+
+.frame .right form .or {
+	margin: 20px 0;
+	font-weight: bold;
+	text-align: center;
+}
+
+.frame .right form .social-login {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.frame .right form .social-login button {
+	flex: 1;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1em;
+}
+
+.frame .right form .social-login .facebook {
+	background-color: #3b5998;
+	color: #ffffff;
+}
+
+.frame .right form .social-login .google {
+	background-color: #db4437;
+	color: #ffffff;
+}
+
+.frame .right .vendor-signin {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.frame .right .vendor-signin p {
+	font-size: 14px;
+}
+
+.frame .right .vendor-signin a {
+	color: #007bff;
+	text-decoration: none;
+	font-weight: 500;
+}
+</style>
+</head>
+<body>
+	
+	<div class="container">
+		<div class="frame">
+			<div class="left">
+			<img src="https://i.ibb.co/nnRg8BT/pexels-elijahsad-5395773.jpg">
+			</div>
+			<div class="right">
+				<h1>Sign Into Your Account</h1>
+				<form action="#" method="post">
+					<div class="input-group">
+						<label for="email"><i class="fas fa-user"></i> Enter email
+							or mobile*</label> <input type="email" id="email" name="email" required>
+						<label for="Password"><i class="fas fa-lock"></i> Enter
+							Password</label> <input type="text" id="password" name="Password"
+							required>
+					</div>
+					<button type="submit">Login</button>
+
+				</form>
+				<div class="vendor-signin">
+					<p>
+					<a href="#vendor-signin">Forgot Password </a>
+					</p>
+					<p>
+						Don't have an account? <a href="#vendor-signin">Register here
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
